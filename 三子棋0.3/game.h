@@ -22,6 +22,3 @@ char judge(char board[ROW][COL], int row, int col);
 //电脑赢 - '#'
 //平局 - 'Q'
 //继续 - 'C'
-
-
-#pragma once

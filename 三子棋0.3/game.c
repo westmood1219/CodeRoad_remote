@@ -1,5 +1,6 @@
 #include "game.h"
 
+//≥ı ºªØ∆Â≈Ã
 void InitBoard(char board[ROW][COL], int row, int col)
 {
     int i = 0;
@@ -13,6 +14,7 @@ void InitBoard(char board[ROW][COL], int row, int col)
     }
 }
 
+//¥Ú”°∆Â≈Ã
 void DisplayBoard(char board[ROW][COL], int row, int col)
 {
     int i = 0;
@@ -42,6 +44,7 @@ void DisplayBoard(char board[ROW][COL], int row, int col)
     }
 }
 
+//ÕÊº“œ¬∆Â
 void PlayerMove(char board[ROW][COL], int row, int col)
 {
     int x = 0;
@@ -71,6 +74,7 @@ void PlayerMove(char board[ROW][COL], int row, int col)
     }
 }
 
+//µÁƒ‘œ¬∆Â
 void ComputerMove(char board[ROW][COL], int row, int col)
 {
     int x = 0;
@@ -78,8 +82,9 @@ void ComputerMove(char board[ROW][COL], int row, int col)
     printf("µÁƒ‘œ¬∆Â:>\n");
     while (1)
     {
-        x = rand() % row;//0-2
-        y = rand() % col;//0-2
+        x = rand() % row;
+        y = rand() % col;
+
         if (board[x][y] == ' ')
         {
             board[x][y] = '#';
@@ -105,6 +110,7 @@ int IsFull(char board[ROW][COL], int row, int col)
 
 }
 
+//≈–∂œ ‰”Æ
 char judge(char board[ROW][COL], int row, int col)
 {
     //––
