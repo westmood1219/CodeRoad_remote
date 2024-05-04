@@ -24,3 +24,4 @@ char judge(char board[ROW][COL], int row, int col);
 //¼ÌÐø - 'C'
 
 
+#pragma once

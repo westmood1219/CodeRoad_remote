@@ -21,31 +21,31 @@ void game()
     {
         //玩家先下
         PlayerMove(board, ROW, COL);
+        //打印棋盘
+        DisplayBoard(board, ROW, COL);
         //判断输赢
         ret = judge(board, ROW, COL);
         if (ret != 'C')
         {
             break;// break跳出的是while的循环，if都不是循环，何谈跳出
         }
-        //打印棋盘
-        DisplayBoard(board, ROW, COL);
 
         //电脑再下
         ComputerMove(board, ROW, COL);
+        //打印棋盘
+        DisplayBoard(board, ROW, COL);
         //判断输赢
         ret = judge(board, ROW, COL);
         if (ret != 'C')
         {
             break;
         }
-        //打印棋盘
-        DisplayBoard(board, ROW, COL);
     }
-    if (ret = '*')
+    if (ret == '*')//调试了三个小时最后发现原来是因为没用==,崩溃了
     {
         printf("玩家赢\n");
     }
-    else if (ret = 'Q')
+    else if (ret == '#')
     {
         printf("电脑赢\n");
     }
