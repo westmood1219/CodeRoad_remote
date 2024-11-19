@@ -28,24 +28,21 @@
 //}
 
 //challenge:2020年有 366天，将2020年1月1日作为计数起点，即计数1，2020年12月31日作为计数终点，即计数 366。计数1代表“2020年1月1日-星期三”,计数10代表“2020年1月10日-星期五”。参考本章实验，通过键盘输入一个1~366之间的值，包括1和366.基于函数，将其转换为年、月、日、星期，并输出到控制台窗口。
-int main()
-{
+int main() {
     int input = 0;
-    printf("请输入你想查看的天数:");
+    printf("请输入你想查看的天数: ");
     scanf_s("%d", &input);
-    if (input > 366 || input < 1)
-    {
-        printf("只能是一年里的天数1-366");
-            return 0;
+
+    if (input > 366 || input < 1) {
+        printf("只能是一年里的天数1-366\n");
+        return 0;
     }
-    int arr[366];
-    for (int i = 0; i < 366; i++)
-    {
-        arr[i] = i + 1;
-    }
+
     int m = month(input);
-    int d = day(input,m);
-    char w = week(input);
+    int d = day(input, m);
+    int w = week(input);
+
     printf("2020年%d月%d日-星期%d\n", m, d, w);
+
     return 0;
 }

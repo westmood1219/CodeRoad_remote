@@ -55,9 +55,9 @@ int month(int input)
     //if (x % 4 == 0 && x % 100 != 0 && x % 400 == 0)
     int monthdays[] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     int i = 0;
-    while (input >= 0)
+    while (input > 0)
     {
-        input = input - monthdays[i];
+        input  -= monthdays[i];
         i++;
     }
     return i;
@@ -65,16 +65,20 @@ int month(int input)
 int day(int input, int m)
 {
     int monthdays[] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    int d = input;
-    while (m > 1)
+    for (int i = 0; m>1; i++)
     {
-        d = d - monthdays[m - 1];
+        input -= monthdays[i];
         m--;
     }
-    return d;
+    return input;
 }
 int week(int input)
 {
-    int w = input % 7 + 2;
+    int w = 0;
+    w=(input % 7) + 2;
+    if (w == 8)
+    {
+        w = 1;
+    }
     return w;
 }

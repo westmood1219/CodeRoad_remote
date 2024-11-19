@@ -12,13 +12,13 @@
 //二进制：0x254d=0010 0101 0100 1101
 
 //3
-//int main()
-//{
-//    int FirstInput, SecondInput = 0;
-//    scanf_s("%d %d", &FirstInput, &SecondInput);
-//    printf("%d\n", FirstInput + SecondInput);
-//    return 0;
-//}
+int main()
+{
+    int FirstInput, SecondInput = 0;
+    scanf_s("%d %d", &FirstInput, &SecondInput);
+    printf("%d\n", FirstInput + SecondInput);
+    return 0;
+}
 
 //4
 //int main()
@@ -129,16 +129,16 @@
 //the second challenge:定义一个整型数组 scores，存储班级中31个学生的数学成绩。编写代码计算并输出全班的平均成绩。统计并输出及格（60分及以上）和不及格的学生人数。
 //输入数据：scores = {58, 72, 85, 60, 90, 45, 78, 88, 92, 65, 70, 80, 55, 66, 77, 89, 91, 50, 60, 70, 80, 90, 40, 50, 60, 70, 80, 90, 30, 40, 50}
 
-int main()
-{
-    int scores[] = {58, 72, 85, 60, 90, 45, 78, 88, 92, 65, 70, 80, 55, 66, 77, 89, 91, 50, 60, 70, 80, 90, 40, 50, 60, 70, 80, 90, 30, 40, 50};
-    int sz = sizeof(scores) / sizeof(scores[0]);
-    float sum = 0.0f;
-    for (int i = 0; i < sz; i++)
-    {
-        sum = sum + scores[i];
-    }
-    printf("全班的平均成绩为%.2f\n", sum / sz);
-    Pass(scores, sz);
-    return 0;
-}
+//int main()
+//{
+//    int scores[] = {58, 72, 85, 60, 90, 45, 78, 88, 92, 65, 70, 80, 55, 66, 77, 89, 91, 50, 60, 70, 80, 90, 40, 50, 60, 70, 80, 90, 30, 40, 50};
+//    int sz = sizeof(scores) / sizeof(scores[0]);
+//    float sum = 0.0f;
+//    for (int i = 0; i < sz; i++)
+//    {
+//        sum = sum + scores[i];
+//    }
+//    printf("全班的平均成绩为%.2f\n", sum / sz);
+//    Pass(scores, sz);
+//    return 0;
+//}

@@ -11,6 +11,6 @@ float absolute(float x);
 
 int MaxAddr(int *arr, int sz);
 
-int month(int input);
 int day(int input, int m);
 int week(int input);
+int month(int input);
