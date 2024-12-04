@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="操作符基础.c" />
-    <ClCompile Include="表达式求值.c" />
+    <ClCompile Include="操作符练习.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
