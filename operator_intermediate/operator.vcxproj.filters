@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="操作符练习.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="操作符基础.c">
+    <ClCompile Include="某年某月的天数.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
