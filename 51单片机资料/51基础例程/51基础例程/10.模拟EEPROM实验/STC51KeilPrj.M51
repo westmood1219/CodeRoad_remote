@@ -1,0 +1,253 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/16/2024  11:47:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\SOFTWARE\KEIL_C51\C51\BIN\BL51.EXE main.obj, EEPROM.obj TO STC51KeilPrj RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  EEPROM.obj (EEPROM)
+  D:\SOFTWARE\KEIL_C51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  STC51KeilPrj (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0065H     UNIT         ?PR?MAIN?MAIN
+            CODE    0865H     0024H     UNIT         ?PR?_DELAYNMS?MAIN
+            CODE    0889H     0013H     UNIT         ?PR?_IAPBYTEREAD?EEPROM
+            CODE    089CH     0012H     UNIT         ?PR?_IAPBYTEWRITE?EEPROM
+            CODE    08AEH     0010H     UNIT         ?PR?_IAPSECTORERASE?EEPROM
+            CODE    08BEH     000CH     UNIT         ?C_C51STARTUP
+            CODE    08CAH     0008H     UNIT         ?PR?IAPDISABLE?EEPROM
+            CODE    08D2H     0007H     UNIT         ?PR?IAPTRIGGER?EEPROM
+
+
+
+OVERLAY MAP OF MODULE:   STC51KeilPrj (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?_IAPBYTEREAD?EEPROM
+  +--> ?PR?_DELAYNMS?MAIN
+  +--> ?PR?_IAPSECTORERASE?EEPROM
+  +--> ?PR?_IAPBYTEWRITE?EEPROM
+
+?PR?_IAPBYTEREAD?EEPROM
+  +--> ?PR?IAPTRIGGER?EEPROM
+  +--> ?PR?IAPDISABLE?EEPROM
+
+?PR?_IAPSECTORERASE?EEPROM
+  +--> ?PR?IAPTRIGGER?EEPROM
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2024  11:47:42  PAGE 2
+
+
+  +--> ?PR?IAPDISABLE?EEPROM
+
+?PR?_IAPBYTEWRITE?EEPROM
+  +--> ?PR?IAPTRIGGER?EEPROM
+  +--> ?PR?IAPDISABLE?EEPROM
+
+
+
+SYMBOL TABLE OF MODULE:  STC51KeilPrj (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A0H.4       PUBLIC        LED1
+  B:00A0H.5       PUBLIC        LED2
+  B:00A0H.6       PUBLIC        LED3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  B:00B0H.2       PUBLIC        KEY1
+  B:00B0H.3       PUBLIC        KEY2
+  B:00B0H.4       PUBLIC        KEY3
+  C:0869H         SYMBOL        _DelayNms
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  C:0865H         SYMBOL        L?0026
+  -------         PROC          L?0025
+  -------         ENDPROC       L?0025
+  C:0865H         SYMBOL        L?0026
+  -------         PROC          _DELAYNMS
+  D:0006H         SYMBOL        nms
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0869H         LINE#         62
+  C:0869H         LINE#         63
+  C:0869H         LINE#         65
+  C:0873H         LINE#         66
+  C:0873H         LINE#         67
+  C:0876H         LINE#         68
+  C:0876H         LINE#         70
+  C:0881H         LINE#         71
+  C:0888H         LINE#         72
+  -------         ENDPROC       _DELAYNMS
+  -------         PROC          MAIN
+  C:0800H         LINE#         83
+  C:0800H         LINE#         84
+  C:0800H         LINE#         85
+  C:0809H         LINE#         86
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2024  11:47:42  PAGE 3
+
+
+  C:0809H         LINE#         87
+  C:0809H         LINE#         88
+  C:080CH         LINE#         89
+  C:080CH         LINE#         90
+  C:080FH         LINE#         91
+  C:0812H         LINE#         92
+  C:0812H         LINE#         93
+  C:0814H         LINE#         94
+  C:0817H         LINE#         95
+  C:081EH         LINE#         96
+  C:0827H         LINE#         97
+  C:0827H         LINE#         98
+  C:0827H         LINE#         100
+  C:082AH         LINE#         101
+  C:082AH         LINE#         102
+  C:082DH         LINE#         103
+  C:0830H         LINE#         104
+  C:0830H         LINE#         105
+  C:0832H         LINE#         106
+  C:0835H         LINE#         107
+  C:083CH         LINE#         108
+  C:0845H         LINE#         109
+  C:0845H         LINE#         110
+  C:0845H         LINE#         112
+  C:0848H         LINE#         113
+  C:0848H         LINE#         114
+  C:084BH         LINE#         115
+  C:084EH         LINE#         116
+  C:084EH         LINE#         117
+  C:0850H         LINE#         118
+  C:0853H         LINE#         119
+  C:085AH         LINE#         120
+  C:0863H         LINE#         121
+  C:0863H         LINE#         122
+  C:0863H         LINE#         123
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        EEPROM
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:089CH         PUBLIC        _IAPByteWrite
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00E6H         PUBLIC        ISP_TRIG
+  D:00A8H         PUBLIC        IE
+  C:08CAH         SYMBOL        IAPDisable
+  D:00B8H         PUBLIC        IP
+  D:00E5H         PUBLIC        ISP_CMD
+  D:00E3H         PUBLIC        ISP_ADDRH
+  C:08D2H         SYMBOL        IAPTrigger
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00E4H         PUBLIC        ISP_ADDRL
+  C:08AEH         PUBLIC        _IAPSectorErase
+  D:00E7H         PUBLIC        ISP_CONTR
+  D:00C8H         PUBLIC        T2CON
+  D:00E2H         PUBLIC        ISP_DATA
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2024  11:47:42  PAGE 4
+
+
+  C:0889H         PUBLIC        _IAPByteRead
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          IAPTRIGGER
+  C:08D2H         LINE#         52
+  C:08D2H         LINE#         53
+  C:08D2H         LINE#         54
+  C:08D5H         LINE#         55
+  C:08D8H         LINE#         56
+  -------         ENDPROC       IAPTRIGGER
+  -------         PROC          IAPDISABLE
+  C:08CAH         LINE#         67
+  C:08CAH         LINE#         68
+  C:08CAH         LINE#         69
+  C:08CDH         LINE#         70
+  C:08CFH         LINE#         71
+  C:08D1H         LINE#         72
+  -------         ENDPROC       IAPDISABLE
+  -------         PROC          _IAPBYTEREAD
+  D:0006H         SYMBOL        addr
+  -------         DO            
+  D:0007H         SYMBOL        dat
+  -------         ENDDO         
+  C:0889H         LINE#         87
+  C:0889H         LINE#         88
+  C:0889H         LINE#         90
+  C:088CH         LINE#         91
+  C:088FH         LINE#         93
+  C:0891H         LINE#         94
+  C:0893H         LINE#         96
+  C:0896H         LINE#         97
+  C:0898H         LINE#         98
+  C:089BH         LINE#         99
+  C:089BH         LINE#         100
+  -------         ENDPROC       _IAPBYTEREAD
+  -------         PROC          _IAPSECTORERASE
+  D:0006H         SYMBOL        addr
+  C:08AEH         LINE#         111
+  C:08AEH         LINE#         112
+  C:08AEH         LINE#         113
+  C:08B1H         LINE#         114
+  C:08B4H         LINE#         116
+  C:08B6H         LINE#         117
+  C:08B8H         LINE#         119
+  C:08BBH         LINE#         120
+  -------         ENDPROC       _IAPSECTORERASE
+  -------         PROC          _IAPBYTEWRITE
+  D:0006H         SYMBOL        addr
+  D:0005H         SYMBOL        dat
+  C:089CH         LINE#         132
+  C:089CH         LINE#         133
+  C:089CH         LINE#         134
+  C:089FH         LINE#         135
+  C:08A2H         LINE#         137
+  C:08A4H         LINE#         138
+  C:08A6H         LINE#         139
+  C:08A8H         LINE#         141
+  C:08ABH         LINE#         142
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/16/2024  11:47:42  PAGE 5
+
+
+  -------         ENDPROC       _IAPBYTEWRITE
+  -------         ENDMOD        EEPROM
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00CDH BYTE (10%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=220
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

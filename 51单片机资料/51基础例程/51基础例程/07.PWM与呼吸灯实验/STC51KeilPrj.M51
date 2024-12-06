@@ -1,0 +1,166 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/13/2022  22:59:32  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+F:\KEIL\C51\BIN\BL51.EXE main.obj TO STC51KeilPrj RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  F:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  F:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  STC51KeilPrj (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0007H     UNIT         ?DT?MAIN
+            IDATA   000FH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0084H     UNIT         ?PR?TIMER0_HANDLER?MAIN
+            CODE    0910H     0010H     UNIT         ?C_INITSEG
+            CODE    0920H     000CH     UNIT         ?PR?INITTIMER0?MAIN
+            CODE    092CH     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    0934H     0005H     UNIT         ?PR?INITINTERRUPT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   STC51KeilPrj (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?INITINTERRUPT?MAIN
+  +--> ?PR?INITTIMER0?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  STC51KeilPrj (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/13/2022  22:59:32  PAGE 2
+
+
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  B:00A0H.4       PUBLIC        LED1
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:092CH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A8H.1       PUBLIC        ET0
+  C:0920H         SYMBOL        InitTimer0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  C:088CH         PUBLIC        Timer0_Handler
+  D:00C8H         PUBLIC        T2CON
+  C:0934H         SYMBOL        InitInterrupt
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          INITINTERRUPT
+  C:0934H         LINE#         57
+  C:0934H         LINE#         58
+  C:0934H         LINE#         59
+  C:0936H         LINE#         60
+  C:0938H         LINE#         61
+  -------         ENDPROC       INITINTERRUPT
+  -------         PROC          INITTIMER0
+  C:0920H         LINE#         72
+  C:0920H         LINE#         73
+  C:0920H         LINE#         74
+  C:0923H         LINE#         75
+  C:0926H         LINE#         76
+  C:0929H         LINE#         77
+  C:092BH         LINE#         78
+  -------         ENDPROC       INITTIMER0
+  -------         PROC          MAIN
+  C:092CH         LINE#         89
+  C:092CH         LINE#         90
+  C:092CH         LINE#         91
+  C:092FH         LINE#         92
+  C:0932H         LINE#         93
+  C:0932H         LINE#         94
+  C:0932H         LINE#         96
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0_HANDLER
+  -------         DO            
+  D:0008H         SYMBOL        s_iCnt1
+  D:000AH         SYMBOL        s_iCnt2
+  D:000CH         SYMBOL        s_iDuty
+  D:000EH         SYMBOL        s_iFlag
+  -------         ENDDO         
+  C:088CH         LINE#         108
+  C:0890H         LINE#         115
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/13/2022  22:59:32  PAGE 3
+
+
+  C:0898H         LINE#         116
+  C:08A1H         LINE#         117
+  C:08A1H         LINE#         118
+  C:08A7H         LINE#         119
+  C:08A7H         LINE#         121
+  C:08AFH         LINE#         122
+  C:08B8H         LINE#         123
+  C:08B8H         LINE#         124
+  C:08BEH         LINE#         127
+  C:08CDH         LINE#         128
+  C:08CDH         LINE#         129
+  C:08D0H         LINE#         130
+  C:08D2H         LINE#         131
+  C:08DCH         LINE#         132
+  C:08DCH         LINE#         133
+  C:08DFH         LINE#         134
+  C:08DFH         LINE#         137
+  C:08E3H         LINE#         138
+  C:08E3H         LINE#         139
+  C:08EBH         LINE#         140
+  C:08EDH         LINE#         141
+  C:08F2H         LINE#         142
+  C:08F2H         LINE#         143
+  C:08FAH         LINE#         144
+  C:08FAH         LINE#         145
+  C:08FAH         LINE#         147
+  C:0905H         LINE#         148
+  C:0905H         LINE#         149
+  C:0907H         LINE#         150
+  C:0909H         LINE#         152
+  C:0909H         LINE#         153
+  C:090BH         LINE#         154
+  C:090BH         LINE#         155
+  -------         ENDPROC       TIMER0_HANDLER
+  -------         ENDMOD        MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00AFH BYTE ( 8%) *
+******************************************************************************
+
+Program Size: data=16.0 xdata=0 code=319
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

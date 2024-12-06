@@ -1,0 +1,127 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/01/2022  15:00:06  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\C51\BIN\BL51.EXE main.obj TO STC51KeilPrj RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  STC51KeilPrj (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?MAIN
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0027H     UNIT         ?PR?TIMER0?MAIN
+            CODE    0035H     000CH     UNIT         ?PR?INITTIMER0?MAIN
+            CODE    0041H     000CH     UNIT         ?C_C51STARTUP
+            CODE    004DH     0005H     UNIT         ?PR?INITINTERRUPT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   STC51KeilPrj (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?INITINTERRUPT?MAIN
+  +--> ?PR?INITTIMER0?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  STC51KeilPrj (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/01/2022  15:00:06  PAGE 2
+
+
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  B:00A0H.4       PUBLIC        LED1
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0003H         PUBLIC        main
+  C:000EH         PUBLIC        Timer0
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A8H.1       PUBLIC        ET0
+  C:0035H         SYMBOL        InitTimer0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  C:004DH         SYMBOL        InitInterrupt
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          INITINTERRUPT
+  C:004DH         LINE#         53
+  C:004DH         LINE#         54
+  C:004DH         LINE#         55
+  C:004FH         LINE#         56
+  C:0051H         LINE#         57
+  -------         ENDPROC       INITINTERRUPT
+  -------         PROC          INITTIMER0
+  C:0035H         LINE#         68
+  C:0035H         LINE#         69
+  C:0035H         LINE#         70
+  C:0038H         LINE#         71
+  C:003BH         LINE#         72
+  C:003EH         LINE#         73
+  C:0040H         LINE#         74
+  -------         ENDPROC       INITTIMER0
+  -------         PROC          MAIN
+  C:0003H         LINE#         85
+  C:0003H         LINE#         86
+  C:0003H         LINE#         87
+  C:0006H         LINE#         88
+  C:0009H         LINE#         89
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0
+  -------         DO            
+  D:0008H         SYMBOL        s_iCounter
+  -------         ENDDO         
+  C:000EH         LINE#         101
+  C:0012H         LINE#         104
+  C:0015H         LINE#         105
+  C:0018H         LINE#         106
+  C:0020H         LINE#         107
+  C:0028H         LINE#         108
+  C:0028H         LINE#         109
+  C:002EH         LINE#         110
+  C:0030H         LINE#         111
+  C:0030H         LINE#         112
+  -------         ENDPROC       TIMER0
+  -------         ENDMOD        MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/01/2022  15:00:06  PAGE 3
+
+
+
+Program Size: data=11.0 xdata=0 code=82
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

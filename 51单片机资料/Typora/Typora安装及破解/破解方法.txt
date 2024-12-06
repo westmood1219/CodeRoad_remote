@@ -1,0 +1,1 @@
+将安装目录中resource文件夹的app.asar进行替换
