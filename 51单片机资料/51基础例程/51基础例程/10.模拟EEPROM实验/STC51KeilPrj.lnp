@@ -1,4 +1,0 @@
-"main.obj",
-"EEPROM.obj" 
-TO "STC51KeilPrj" 
-RAMSIZE(256) 
