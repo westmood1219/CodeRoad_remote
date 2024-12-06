@@ -448,3 +448,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /VSipch
+/51单片机资料/
