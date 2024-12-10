@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\STC51KeilPrj" 
+PRINT(".\Listings\STC51KeilPrj.m51") RAMSIZE(256) 

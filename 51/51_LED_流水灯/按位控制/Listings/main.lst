@@ -1,0 +1,69 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              12/09/2024 22:28:29 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\ProgramData\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <STC89C5xRC.H>
+   2          
+   3          // 定义 LED 引脚
+   4          sbit LED1 = P2^4;
+   5          sbit LED2 = P2^5;
+   6          sbit LED3 = P2^6;
+   7          sbit LED4 = P2^7;
+   8          //sbit定义放在函数外部，通常放在文件的顶部，确保这些定义在整个文件中都有效
+   9          
+  10          static void DelayNms(int nms){
+  11   1        
+  12   1            unsigned char j;
+  13   1            int i;
+  14   1            for(i=0;i<nms;i++){
+  15   2                  for(j = 0; j < 123; j++) {
+  16   3                      // 延时或其他操作
+  17   3                  }
+  18   2                }
+  19   1            }
+  20          
+  21          void main(){
+  22   1          int nms;// 变量声明放在函数开始部分
+  23   1          nms = 500;//延迟时间n毫秒
+  24   1      
+  25   1          while(1) {
+  26   2              LED1 = 0;
+  27   2              DelayNms(nms);
+  28   2            
+  29   2              LED1 = 1;
+  30   2              LED2 = 0;
+  31   2              DelayNms(nms);
+  32   2      
+  33   2              LED2 = 1;
+  34   2              LED3 = 0;
+  35   2              DelayNms(nms);
+  36   2      
+  37   2              LED3 = 1;
+  38   2              LED4 = 0;
+  39   2              DelayNms(nms);
+  40   2            
+  41   2              LED4 = 1;
+  42   2              }
+  43   1          }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     67    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.60.7.0   MAIN                                                              12/09/2024 22:28:29 PAGE 2   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

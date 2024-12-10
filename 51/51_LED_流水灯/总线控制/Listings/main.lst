@@ -1,0 +1,59 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              12/09/2024 23:10:30 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\ProgramData\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <STC89C5xRC.H>
+   2          
+   3          static void DelayNms(int nms){
+   4   1        
+   5   1            unsigned char j;
+   6   1            int i;
+   7   1            for(i=0;i<nms;i++){
+   8   2                  for(j = 0; j < 123; j++) {
+   9   3                      // ÑÓÊ±
+  10   3                  }
+  11   2                }
+  12   1            }
+  13          
+  14          void main(){
+  15   1        unsigned char i;
+  16   1        while(1){
+  17   2          /*P2 = 0xEF;
+  18   2          DelayNms(500);
+  19   2          
+  20   2          P2 = 0xDF;
+  21   2          DelayNms(500);
+  22   2          
+  23   2          P2 = 0xBF;
+  24   2          DelayNms(500);
+  25   2          
+  26   2          P2 = 0x7F;
+  27   2          DelayNms(500);*/
+  28   2          
+  29   2          P2 = 0xEF;
+  30   2          for(i=0;i<4;i++){
+  31   3            DelayNms(500);
+  32   3            P2 = P2 << 1;
+  33   3          }
+  34   2        }
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
