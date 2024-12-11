@@ -1,5 +1,5 @@
 {
-  "name": "hello_EIDE",
+  "name": "流水灯",
   "type": "C51",
   "dependenceList": [],
   "srcDirs": [
@@ -12,11 +12,14 @@
     "folders": []
   },
   "miscInfo": {
-    "uid": "0a4faf497daa559a01597ea04f85f255"
+    "uid": "97fa895639aefd3b1b988323e54b4ad6"
   },
   "targets": {
     "Release": {
-      "excludeList": [],
+      "excludeList": [
+        "src/流水灯样式一.c",
+        "src/流水灯实例.c"
+      ],
       "toolchain": "Keil_C51",
       "compileConfig": {
         "options": ""
