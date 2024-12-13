@@ -23,6 +23,8 @@ static void DelayNms(int nms)
     }
 }
 
+
+
 void main()
 {
     while (1)
@@ -68,7 +70,7 @@ void main()
             DelayNms(50);
             if (0 == KEY3)
             {
-                while(0==KEY3)
+                while(1)
                 {
                     LED1 = 0;
                     LED4 = 0;

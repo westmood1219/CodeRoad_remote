@@ -1,4 +1,0 @@
-".\Objects\STARTUP.obj",
-".\Objects\main.obj" 
-TO ".\Objects\总线控制" 
-PRINT(".\Listings\总线控制.m51") RAMSIZE(256) 
