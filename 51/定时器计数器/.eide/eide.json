@@ -1,5 +1,5 @@
 {
-  "name": "流水灯",
+  "name": "定时器计数器",
   "type": "C51",
   "dependenceList": [],
   "srcDirs": [
@@ -12,13 +12,12 @@
     "folders": []
   },
   "miscInfo": {
-    "uid": "97fa895639aefd3b1b988323e54b4ad6"
+    "uid": "cdb5a9674fd9ec8b2ae4973c4bb90992"
   },
   "targets": {
     "Release": {
       "excludeList": [
-        "src/流水灯样式一.c",
-        "src/流水灯实例.c"
+        "src/简易倒计时.c"
       ],
       "toolchain": "Keil_C51",
       "compileConfig": {
@@ -27,7 +26,7 @@
       "uploader": "Custom",
       "uploadConfig": {
         "bin": "",
-        "commandLine": "python ./tools/stcflash.py -p COM4 \"${hexFile}\"",
+        "commandLine": "python ./tools/stcflash.py -p COM5 \"${hexFile}\"",
         "eraseChipCommand": ""
       },
       "uploadConfigMap": {},
