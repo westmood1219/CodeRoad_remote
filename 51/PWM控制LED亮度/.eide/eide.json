@@ -1,5 +1,5 @@
 {
-  "name": "定时器计数器",
+  "name": "PWM控制LED亮度",
   "type": "C51",
   "dependenceList": [],
   "srcDirs": [
@@ -12,12 +12,13 @@
     "folders": []
   },
   "miscInfo": {
-    "uid": "cdb5a9674fd9ec8b2ae4973c4bb90992"
+    "uid": "be4e6fda64902bc5171c5fac8ad2de01"
   },
   "targets": {
     "Release": {
       "excludeList": [
-        "src/简易倒计时.c"
+        "src/main.c",
+        "src/呼吸灯亮度控制.c"
       ],
       "toolchain": "Keil_C51",
       "compileConfig": {
@@ -26,7 +27,7 @@
       "uploader": "Custom",
       "uploadConfig": {
         "bin": "",
-        "commandLine": "python ./tools/stcflash.py -p COM8 \"${hexFile}\"",
+        "commandLine": "python ./tools/stcflash.py -p ${port} \"${hexFile}\"",
         "eraseChipCommand": ""
       },
       "uploadConfigMap": {},
