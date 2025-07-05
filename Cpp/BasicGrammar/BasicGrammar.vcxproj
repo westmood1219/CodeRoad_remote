@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="读写文件.cpp" />
+    <ClInclude Include="MyArray.hpp" />
+    <ClInclude Include="person.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="类模板案例.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
