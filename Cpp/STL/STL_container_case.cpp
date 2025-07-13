@@ -7,7 +7,7 @@ using namespace std;
 #include<ctime>
 #define cehua 0
 #define meishu 1
-#define yanfa 2
+#define yanfa 2//...6
 
 class Empee
 {
@@ -18,20 +18,20 @@ public:
 
 void createEmpee(vector<Empee>& v)
 {
-    string nameSeed = "ABCDEFGHIJ";
+    string nameSeed = "ABCDEFGHIJ";//string可看作数组
     for (int i = 0; i < 10; i++)
     {
-        Empee empee;
+        Empee empee;//
         empee.m_Name = "员工";
-        empee.m_Name += nameSeed[i];
+        empee.m_Name += nameSeed[i];//string特性
 
         empee.m_Money = rand() % 5001 + 5000;
         //插入
-        v.push_back(empee);
+        v.push_back(empee);//局部变量empee,拷贝完出循环就销毁
     }
 }
 
-void setGroup(vector<Empee>& v, multimap<int, Empee>& m)
+void setGroup(vector<Empee>& v, multimap<int, Empee>& m)//
 {
     for (vector<Empee>::iterator it = v.begin(); it != v.end(); it++)
     {
@@ -47,12 +47,12 @@ void setGroup(vector<Empee>& v, multimap<int, Empee>& m)
 void showEmpeeByGroup(multimap<int, Empee>& m)
 {
     cout << "策划部门" << endl;
-    multimap<int, Empee>::iterator pos = m.find(cehua);
+    multimap<int, Empee>::iterator pos = m.find(cehua);//
 
-    int count = m.count(cehua);
-    for (int index = 0; pos != m.end() && index<count; pos++,index++)
+    int count = m.count(cehua);//
+    for (int index = 0; pos != m.end() && index<count; pos++,index++)//结合pos是第一个cehuakey,count是所有策划数量,multi中相同key的迭代器挨着
     {
-        cout << pos->second.m_Name << " salary: " << pos->second.m_Money << endl;
+        cout << pos->second.m_Name << " salary: " << pos->second.m_Money << endl;//思维固化了...pos->second.m_Money居然可以这样写
     }
     cout << "----------------------" << endl;
 
