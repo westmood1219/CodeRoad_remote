@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="查找.cpp">
+    <ClCompile Include="常用算术生成和集合算法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
